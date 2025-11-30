@@ -122,10 +122,13 @@ export const LANGUAGES = [
   "French",
   "Arabic",
   "Bengali",
+  "Japanese",
   "Portuguese",
   "Russian",
   "German",
+  "Vietnamese",
   "Italian",
+  "Urdu"
 ];
 
 export const FIELDS_OF_STUDY = [
@@ -163,5 +166,13 @@ export const JOB_ROLES = [
   "Marketing specialist",
   "Salesperson",
   "Customer support",
+  "Consulting",
   "Other",
+];
+
+export const FINANCIAL_SUPPORT_RETURN_OPTIONS = [
+  "Philanthropy",
+  "Income_Share",
+  "Work_Back_Service",
+  "Unspecified",
 ];

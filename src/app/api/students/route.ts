@@ -19,6 +19,7 @@ export async function POST(req: NextRequest) {
       job_role,
       financial_support_per_year,
       financial_support_duration,
+      financial_support_return,
       description,
     } = body ?? {};
 
@@ -66,6 +67,7 @@ export async function POST(req: NextRequest) {
         jobRole: job_role ?? null,
         financialSupportPerYear: financialSupportPerYearInt,
         financialSupportDuration: financialSupportDurationInt,
+        financialSupportReturn: financial_support_return ?? null,
         description: description ?? null,
       })
       .onConflictDoUpdate({
@@ -81,6 +83,7 @@ export async function POST(req: NextRequest) {
           jobRole: job_role ?? null,
           financialSupportPerYear: financialSupportPerYearInt,
           financialSupportDuration: financialSupportDurationInt,
+          financialSupportReturn: financial_support_return ?? null,
           description: description ?? null,
         },
       });

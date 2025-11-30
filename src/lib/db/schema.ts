@@ -20,6 +20,11 @@ export const jobRoleEnum = pgEnum(
   JOB_ROLES as [string, ...string[]],
 );
 
+export const financialSupportReturnEnum = pgEnum(
+  "financial_support_return_enum",
+  ["Philanthropy", "Income_Share", "Work_Back_Service", "Unspecified"] as [string, ...string[]],
+);
+
 export const students = pgTable("students", {
   userId: text("user_id").primaryKey(),
   name: text("name"),
@@ -32,6 +37,7 @@ export const students = pgTable("students", {
   jobRole: jobRoleEnum("job_role"),
   financialSupportPerYear: integer("financial_support_per_year"),
   financialSupportDuration: integer("financial_support_duration"),
+  financialSupportReturn: financialSupportReturnEnum("financial_support_return"),
   description: text("description"),
   createdAt: timestamp("created_at", { withTimezone: true }).defaultNow().notNull(),
 });
